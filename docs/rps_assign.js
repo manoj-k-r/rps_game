@@ -1,18 +1,18 @@
-        let rn=1;
+let rn=1;
         let us=0;
         let cs=0;
-        function roundTracker(){
+        function roundtracker(){
             document.getElementById("roundno").textContent=`Round: ${rn}`;
         }
-        roundTracker();
-        function usersTracker(){
+        roundtracker();
+        function userstracker(){
             document.getElementById("userscor").textContent=us;
         }
-        usersTracker();
+        userstracker();
         function compstracker() {
             document.getElementById("compscor").textContent=cs;
         }
-        compsTracker();
+        compstracker();
         function gmOvr() {
             if (rn==6) {
                 let over=document.getElementById("over");
@@ -28,8 +28,8 @@
                 }
                
                 document.getElementById("roundno").textContent="Game Over";
-                usersTracker();
-                compsTracker();
+                userstracker();
+                compstracker();
                 let btnArr=["rock","paper","scissors"];
                 for (i=0;i<=2;i++) {
                     let btn=document.getElementById(btnArr[i]);
@@ -54,8 +54,8 @@
                     let res=`You won Round ${rn}. Computer chose ${cap(b)}!`; 
                     rn++;
                     us++;
-                    roundTracker();
-                    usersTracker();
+                    roundtracker();
+                    userstracker();
                     gmOvr();
                     return res;
                 }
@@ -63,15 +63,15 @@
                     let res=`You lost Round ${rn}. Computer chose ${cap(b)}!`; 
                     rn++;
                     cs++;
-                    compsTracker();
-                    roundTracker();
+                    compstracker();
+                    roundtracker();
                     gmOvr();
                     return res;
                 }
                 else if(a==b) {
                     let res=`Computer chose ${cap(b)} as well! Round ${rn} was a tie.`;
                     rn++;
-                    roundTracker();
+                    roundtracker();
                     gmOvr();
                     return res;
                 }
@@ -92,9 +92,9 @@
             rn=1;
             us=0;
             cs=0;
-            roundTracker();
-            usersTracker();
-            compsTracker();
+            roundtracker();
+            userstracker();
+            compstracker();
             let over=document.getElementById("over");
             over.style.padding="20px";
             over.textContent="";
