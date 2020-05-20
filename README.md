@@ -1,5 +1,6 @@
 # rps_game
 Rock Paper Scissors Game
+
 This is my first JS project.
 
 I learned how to:
